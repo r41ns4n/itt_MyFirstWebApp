@@ -11,6 +11,8 @@
     <title>Meine Erste JSP</title>
 </head>
 <body>
+<p>${errorMessage}</p>
+
 <form action="/login.do" method="post">
     <p>Name: <input type="text" name="name"/></p>
     <p>Passwort: <input type="password" name="password"/></p>
