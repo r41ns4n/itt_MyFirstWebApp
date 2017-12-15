@@ -11,7 +11,10 @@
     <title>Meine Erste JSP</title>
 </head>
 <body>
-<p>Meine erste JSP</p>
-<p>Mein Name ist: ${name}</p>
+<form action="/login.do" method="post">
+    <p>Name: <input type="text" name="name"/></p>
+    <p>Passwort: <input type="password" name="password"/></p>
+    <input type="submit" value="Anmelden">
+</form>
 </body>
 </html>
