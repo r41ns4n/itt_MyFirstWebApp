@@ -11,20 +11,12 @@ import java.io.PrintWriter;
 // Deploymentenscripter hinzufügen
 @WebServlet(urlPatterns = "/login.do")
 
-public class LoginServlet extends HttpServlet{
+public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter writer = resp.getWriter();
-        writer.println("<html>");
-        writer.println("<head>");
-        writer.println("<title>My First WebApp</title>");
-        writer.println("</head>");
-        writer.println("<body>");
-        writer.println("<h1>Mein erste Webapp</h1>");
-        writer.println("<p>Hallo Ihr da</p>");
-        writer.println("</body>");
-        writer.println("</html>");
+        req.setAttribute("name", req.getParameter("name"));
+        req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
 
 
     }
