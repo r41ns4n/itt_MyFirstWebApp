@@ -12,5 +12,7 @@
 </head>
 <body>
 <p>Hallo ${name}, Willkommen auf unserer Seite</p>
+<p>Deine ToDo´s sind:</p>
+<p>${todos}</p>
 </body>
 </html>
