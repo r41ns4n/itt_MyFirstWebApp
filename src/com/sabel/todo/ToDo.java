@@ -41,7 +41,7 @@ public class ToDo {
 
     @Override
     public String toString() {
-        return "- " + name + "<br/ >";
+        return name;
     }
 
 

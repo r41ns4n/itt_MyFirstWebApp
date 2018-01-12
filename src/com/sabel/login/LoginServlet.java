@@ -16,7 +16,6 @@ public class LoginServlet extends HttpServlet {
 
     // DATA FILDS
     private LoginService loginService = new LoginService();
-    private ToDoService toDoService = new ToDoService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,10 +27,8 @@ public class LoginServlet extends HttpServlet {
         String name = req.getParameter("name");
         String password = req.getParameter("password");
         if (loginService.checkPassword(name, password)) {
-            req.setAttribute("name", req.getParameter("name"));
-            req.setAttribute("todos", toDoService.retrieveTodos());
-            req.getRequestDispatcher("/WEB-INF/views/wellcome.jsp").forward(req, resp);
-
+            req.getSession().setAttribute("name", name);
+            resp.sendRedirect("/todo.do");
         } else {
             req.setAttribute("errorMessage", "Login nicht erfolgreich");
             req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
