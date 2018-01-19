@@ -1,6 +1,7 @@
 package com.sabel.todo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ToDoService {
@@ -14,17 +15,33 @@ public class ToDoService {
         todos.add(new ToDo("Java EE lernen"));
         todos.add(new ToDo("Betriebssysteme lernen"));
         todos.add(new ToDo("Irgendwas anderes lernen"));
-    }
+    } // END STATIC
 
     // CONSTRUCTOR
     public ToDoService() {
-
-    }
+    } // END CONSTRUCTOR
 
     // METHODS
     public List<ToDo> retrieveTodos() {
         return todos;
-    } // END public List<ToDo> retrieveTodos()
+    } // END public List
 
+    public void add(ToDo toDo) {
+        todos.add(toDo);
+    } // END public void add
+
+    public void delete(ToDo toDo) {
+        todos.remove(toDo);
+    } // END public void delete
+
+    public void deleteString(String name) {
+        Iterator<ToDo> iterator = todos.iterator();
+        while (iterator.hasNext()) {
+            ToDo toDo = iterator.next();
+            if (toDo.getName().equals(name)) {
+                iterator.remove();
+            } // END IF
+        } // END WHILE
+    } // public void deleteString
 
 } // END CLASS TODOSERVICE

@@ -14,6 +14,7 @@
 <body>
 <p>Hallo ${name}, Willkommen auf unserer Seite</p>
 <p>Deine ToDo´s sind:</p>
+
 <ol>
     <c:forEach var="todo" items="${todos}">
         <li>
@@ -22,7 +23,9 @@
     </c:forEach>
 
 </ol>
-
+<form action="/addToDo.do" method="get">
+    <input type="submit" name="addToDo" value="Neues ToDo hinzufügen">
+</form>
 
 </body>
 </html>
