@@ -34,6 +34,7 @@ public class ToDoService {
         todos.remove(toDo);
     } // END public void delete
 
+    // Löscht Objekte und setzt die Reihenfolge selber wieder zusammen
     public void deleteString(String name) {
         Iterator<ToDo> iterator = todos.iterator();
         while (iterator.hasNext()) {

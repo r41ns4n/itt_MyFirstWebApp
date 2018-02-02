@@ -9,16 +9,22 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+
+
     <title>Wellcome</title>
+
+
 </head>
 <body>
+
+
 <p>Hallo ${name}, Willkommen auf unserer Seite</p>
 <p>Deine ToDo´s sind:</p>
 
 <ol>
     <c:forEach var="todo" items="${todos}">
         <li>
-                ${todo.name}
+                ${todo.name} &nbsp; &nbsp; &nbsp; <a href="/delete-todo.do?name=${todo.name}">delete</a>
         </li>
     </c:forEach>
 
@@ -26,6 +32,7 @@
 <form action="/addToDo.do" method="get">
     <input type="submit" name="addToDo" value="Neues ToDo hinzufügen">
 </form>
+
 
 </body>
 </html>
