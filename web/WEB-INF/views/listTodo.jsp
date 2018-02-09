@@ -8,30 +8,43 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!-- Include Header -->
-<%@include file="../common/header.jspf"%>
+<%@include file="../common/header.jspf" %>
 
 <!-- Include Navigation -->
-<%@include file="../common/navigation.jspf"%>
+<%@include file="../common/navigation.jspf" %>
 
 <!-- Main Container -->
 <div class="container">
 
-<p>Hallo ${name}, Willkommen auf unserer Seite</p>
-<p>Deine ToDo´s sind:</p>
+    <p>Hallo ${name}, Willkommen auf unserer Seite</p>
+    <p></p>
 
-<ol>
-    <c:forEach var="todo" items="${todos}">
-        <li>
-                ${todo.name} &nbsp; &nbsp; &nbsp; <a href="/delete-todo.do?name=${todo.name}">delete</a>
-        </li>
-    </c:forEach>
+    <table class="table table-striped">
+        <caption>Deine ToDo´s sind:</caption>
+        <thead>
+        <th>ToDo</th>
+        <th>Aktion</th>
+        </thead>
+        <tbody>
 
-</ol>
-<form action="/addToDo.do" method="get">
-    <input type="submit" name="addToDo" value="Neues ToDo hinzufügen">
-</form>
+        <c:forEach var="todo" items="${todos}">
+            <tr>
+                <td>
+                        ${todo.name}
+                </td>
+                <td>
+                    <a href="/delete-todo.do?name=${todo.name}" class="btn btn-danger">delete</a>
+                </td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+    <form action="/addToDo.do" method="get">
+        <input type="submit" name="addToDo" value="Neues ToDo hinzufügen" class="btn btn-success">
+    </form>
 
 </div>
 
 <!-- Include Footer -->
-<%@include file="../common/footer.jspf"%>
+<%@include file="../common/footer.jspf" %>
