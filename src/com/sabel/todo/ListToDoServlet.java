@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet (urlPatterns = "/todo.do")
-public class ToDoServlet extends HttpServlet{
+public class ListToDoServlet extends HttpServlet{
 
     // DATA FIELDS
     private ToDoService toDoService = new ToDoService();
@@ -17,6 +17,6 @@ public class ToDoServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("todos", toDoService.retrieveTodos());
-        req.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/views/listTodo.jsp").forward(req,resp);
     } // END DOGET
 } // END CLASS TODOSERVLET

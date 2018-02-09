@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
-    }
+    } // OVERRIDE doGet
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -33,9 +33,5 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("errorMessage", "Login nicht erfolgreich");
             req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
         } // END ELSE-IF
-
-
-
-
-    }
+    } // OVERRIDE doPost
 } // END CLASS LoginServlet
