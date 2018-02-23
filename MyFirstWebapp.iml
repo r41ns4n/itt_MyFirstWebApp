@@ -32,5 +32,7 @@
     <orderEntry type="library" name="org.webjars:bootstrap:4.0.0" level="project" />
     <orderEntry type="library" name="org.webjars:jquery:3.1.1" level="project" />
     <orderEntry type="library" name="org.webjars:bootstrap:3.3.7" level="project" />
+    <orderEntry type="library" name="org.jboss.weld.servlet:weld-servlet:2.4.6.Final" level="project" />
+    <orderEntry type="library" name="org.jboss.weld.servlet:weld-servlet:2.4.6.Final" level="project" />
   </component>
 </module>

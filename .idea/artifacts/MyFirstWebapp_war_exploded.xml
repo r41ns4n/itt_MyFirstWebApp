@@ -12,6 +12,7 @@
           <element id="library" level="project" name="org.webjars:bootstrap:4.0.0" />
           <element id="library" level="project" name="org.webjars:jquery:3.1.1" />
           <element id="library" level="project" name="org.webjars:bootstrap:3.3.7" />
+          <element id="library" level="project" name="org.jboss.weld.servlet:weld-servlet:2.4.6.Final" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="MyFirstWebapp/web/Web" />

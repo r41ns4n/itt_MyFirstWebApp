@@ -1,5 +1,6 @@
 package com.sabel.todo;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +12,8 @@ import java.io.IOException;
 public class AddToDoServlet extends HttpServlet {
 
     // DATA FIELDS
-    private ToDoService toDoService = new ToDoService();
+    @Inject
+    private ToDoService toDoService;
 
     // METHODS
     @Override
