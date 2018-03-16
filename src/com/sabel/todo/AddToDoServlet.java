@@ -26,6 +26,6 @@ public class AddToDoServlet extends HttpServlet {
         String addNewToDo = req.getParameter("addNewToDo");
         ToDo addToDo = new ToDo(addNewToDo);
         toDoService.add(addToDo);
-        resp.sendRedirect("/todo.do");
+        resp.sendRedirect("todo.do");
     } // END protected void doPost
 } // END CLASS AddToDoServlet

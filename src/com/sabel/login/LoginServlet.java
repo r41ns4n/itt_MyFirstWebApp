@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         if (loginService.checkPassword(name, password)) {
             req.getSession().setAttribute("name", name);
-            resp.sendRedirect("/todo.do");
+            resp.sendRedirect("todo.do");
         } else {
             req.setAttribute("errorMessage", "Login nicht erfolgreich");
             req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);

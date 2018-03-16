@@ -33,14 +33,14 @@
                         ${todo.name}
                 </td>
                 <td>
-                    <a href="/delete-todo.do?name=${todo.name}" class="btn btn-danger">delete</a>
+                    <a href="delete-todo.do?name=${todo.name}" class="btn btn-danger">delete</a>
                 </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
 
-    <form action="/addToDo.do" method="get">
+    <form action="addToDo.do" method="get">
         <input type="submit" name="addToDo" value="Neues ToDo hinzufügen" class="btn btn-success">
     </form>
 

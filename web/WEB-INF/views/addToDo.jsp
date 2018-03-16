@@ -16,7 +16,7 @@
 
 <div class="container">
     <p>Hier können Sie ein Neues ToDo in Ihre Liste mit aufnehmen</p>
-    <form action="/addToDo.do" method="post">
+    <form action="addToDo.do" method="post">
         <input type="text" name="addNewToDo">
         <input type="submit" value="Hinzufügen" class="btn btn-success">
     </form>
